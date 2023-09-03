@@ -25,6 +25,7 @@ MateriaSource::~MateriaSource()
     }
 }
 
+
 MateriaSource::MateriaSource(const MateriaSource& original)
 {
     *(this) = original;
