@@ -4,12 +4,12 @@
 
 AMateria::AMateria(std::string const &type):type(type)
 {
-    
+    std::cout << "constructor  parametized of AMateria called" << std::endl;
 }
 
 AMateria::AMateria():type("undefine")
 {
-
+    std::cout << "default constructor  of AMateria called" << std::endl;
 }
 
 std::string const & AMateria::getType() const
@@ -21,7 +21,7 @@ std::string const & AMateria::getType() const
 
 AMateria::~AMateria()
 {
-
+    std::cout << "destructor of AMateria called" << std::endl;
 }
 
 

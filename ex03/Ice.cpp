@@ -3,15 +3,15 @@
 
 Ice::Ice():AMateria("ice")
 {
-
+    std::cout << "default constructor of Ice called" << std::endl;
 }
 
 Ice::~Ice()
 {
-
+    std::cout << "destructor  of Ice called" << std::endl;
 }
 
-Ice::Ice(const Ice& original)
+Ice::Ice(const Ice& original):AMateria("ice")
 {
     (*this) = original;
 }

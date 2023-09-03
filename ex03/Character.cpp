@@ -4,6 +4,7 @@
 
 Character::Character():m_name("user_2154"),m_i(0)
 {
+    std::cout << "default constructor  of Character called" << std::endl;
     int j = 0;
     while(j < 4)
     {
@@ -15,6 +16,7 @@ Character::Character():m_name("user_2154"),m_i(0)
 
 Character::Character(std::string m_name):m_name(m_name),m_i(0)
 {
+    std::cout << "constructor  parametized of Character called" << std::endl;
     int j = 0;
     while(j < 4)
     {
@@ -26,6 +28,7 @@ Character::Character(std::string m_name):m_name(m_name),m_i(0)
 
 Character::~Character()
 {
+    std::cout << "destructor of Character called" << std::endl;
     int j = 0;
     while(j < 4)
     {
@@ -50,7 +53,7 @@ Character& Character::operator=(const Character& original)
     m_name = original.m_name;
     while( m_i < original.m_i)
     {
-        m_inventery[m_i] = original.m_inventery[m_i]; 
+        m_inventery[m_i] = original.m_inventery[m_i]->clone(); 
         m_i++;
     }
     if(m_i != 3)

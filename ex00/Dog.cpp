@@ -3,7 +3,7 @@
 
 Dog::Dog()
 {
-    this->type = "dDog";
+    this->type = "Dog";
      std::cout << "Constructors of Dog called" << std::endl;
 }
 

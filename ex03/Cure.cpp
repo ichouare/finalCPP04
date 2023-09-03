@@ -3,15 +3,15 @@
 
 Cure::Cure():AMateria("cure")
 {
-
+        std::cout << "default constructor of Cure called" << std::endl;
 }
 
 Cure::~Cure()
 {
-
+     std::cout << "destructor of Cure called" << std::endl;
 }
 
-Cure::Cure(const Cure& original)
+Cure::Cure(const Cure& original):AMateria("cure")
 {
     (*this) = original;
 }

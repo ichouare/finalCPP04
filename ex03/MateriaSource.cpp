@@ -5,6 +5,7 @@
 
 MateriaSource::MateriaSource():m_num(0)
 {
+        std::cout << "default constructor of MateriaSource called" << std::endl;
         int i = 0;
         while(i < 4)
         {
@@ -15,7 +16,7 @@ MateriaSource::MateriaSource():m_num(0)
 
 MateriaSource::~MateriaSource()
 {
-
+    std::cout << "destructor of MateriaSource called" << std::endl;
     int i = 0;
     while(i < 4)
     {
@@ -37,7 +38,7 @@ MateriaSource& MateriaSource::operator=(const MateriaSource &original)
     m_num = 0;
     while (m_num < original.m_num)
     {
-        m_materias[m_num] = original.m_materias[m_num];
+        m_materias[m_num] = original.m_materias[m_num]->clone();
         m_num++;
     }
     if(m_num != 3)
